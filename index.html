@@ -1,0 +1,3149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORGE Athletic Club — Investor Pitch Deck 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================
+   FORGE ATHLETIC CLUB — COMPLETE STYLESHEET
+   Premium Investor Pitch Deck
+   ===================================================== */
+
+/* --- RESET & BASE --- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0f1a; color: #e0e0e0; line-height: 1.7; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: #FF6B35; text-decoration: none; transition: color 0.3s; }
+a:hover { color: #FFB800; }
+::selection { background: rgba(255,107,53,0.3); color: #fff; }
+
+/* --- CSS VARIABLES --- */
+:root {
+  --bg-primary: #0a0f1a;
+  --bg-secondary: #0f1520;
+  --bg-card: rgba(255,255,255,0.03);
+  --border-card: rgba(255,255,255,0.08);
+  --border-card-hover: rgba(255,107,53,0.25);
+  --accent-orange: #FF6B35;
+  --accent-gold: #FFB800;
+  --accent-green: #00C853;
+  --accent-red: #FF3D3D;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b8c8;
+  --text-muted: #6b7280;
+  --glass-blur: 12px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --section-padding: 120px 0;
+  --container-width: 1200px;
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 600; line-height: 1.15; color: var(--text-primary); letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+h4 { font-size: clamp(1.1rem, 1.5vw, 1.35rem); }
+p { color: var(--text-secondary); font-size: 1.05rem; }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- LAYOUT --- */
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 32px; width: 100%; }
+.section { padding: var(--section-padding); position: relative; }
+
+/* --- GLASSMORPHISM --- */
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.glass:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(255,107,53,0.08);
+}
+
+/* --- SCROLL REVEAL --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* --- SECTION NUMBERS (Decorative) --- */
+.section-number {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 700;
+  color: rgba(255,255,255,0.015);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* --- SECTION TITLE + ANIMATED UNDERLINE --- */
+.section-header { text-align: center; margin-bottom: 72px; position: relative; z-index: 1; }
+.section-header h2 { margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px; }
+.section-header .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 640px; margin: 0 auto; font-style: italic; }
+.section-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
+  margin: 20px auto 0;
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+.section-header:hover::after { width: 140px; }
+
+/* --- GRIDS --- */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+/* =======================================================
+   SECTION 1: HERO
+   ======================================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 24px;
+}
+
+/* Animated grid background */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.02) 59px, rgba(255,255,255,0.02) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.02) 59px, rgba(255,255,255,0.02) 60px);
+  background-size: 60px 60px;
+  animation: gridShift 25s linear infinite;
+  z-index: 0;
+}
+@keyframes gridShift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(255,107,53,0.06) 0%, transparent 70%),
+              radial-gradient(ellipse 60% 50% at 30% 80%, rgba(255,184,0,0.04) 0%, transparent 60%);
+  z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1px solid var(--accent-orange);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin-bottom: 36px;
+  background: rgba(255,107,53,0.06);
+}
+
+.hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(5rem, 15vw, 12rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, var(--accent-orange) 20%, var(--accent-gold) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0;
+}
+.hero-athletic {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 18px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+.hero-tagline {
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+.hero-desc {
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto 52px;
+  line-height: 1.6;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 860px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+.hero-metric-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 28px 16px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.hero-metric-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-4px);
+}
+.hero-metric-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+.hero-metric-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: scrollBounce 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+.scroll-indicator .chevron {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid var(--accent-orange);
+  border-bottom: 2px solid var(--accent-orange);
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+  50% { transform: translateX(-50%) translateY(12px); opacity: 1; }
+}
+
+/* =======================================================
+   SECTION 2: LA OPORTUNIDAD DE MERCADO
+   ======================================================= */
+.market-charts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 48px; }
+
+.chart-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.chart-container h4 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+.chart-bars { display: flex; flex-direction: column; gap: 16px; }
+.chart-bar-row, .chart-row { display: flex; align-items: center; gap: 14px; }
+.chart-bar-label, .chart-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  min-width: 52px;
+  text-align: right;
+  font-weight: 500;
+}
+.chart-bar-track, .chart-bar-wrapper {
+  flex: 1;
+  height: 32px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.chart-bar {
+  position: relative;
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0a0f1a;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.chart-bar.animated { width: var(--bar-width); }
+.chart-bar::after {
+  content: attr(data-value);
+  position: absolute;
+  right: -8px;
+  transform: translateX(100%);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+/* P&L chart styles */
+.pl-chart { display: flex; flex-direction: column; gap: 24px; }
+.pl-year { }
+.pl-year-label { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; color: var(--accent-orange); margin-bottom: 8px; }
+.pl-socios { color: var(--text-muted); font-weight: 400; font-size: 0.85rem; }
+.pl-bars { display: flex; flex-direction: column; gap: 8px; }
+.pl-bar-group { display: flex; align-items: center; gap: 12px; }
+.pl-bar-label { font-size: 0.8rem; color: var(--text-muted); min-width: 65px; font-weight: 500; }
+.chart-bar-wrapper { position: relative; }
+.ebitda-bar { background: linear-gradient(90deg, var(--accent-gold), #ffd54f) !important; }
+/* Conclusion metric grid */
+.cta-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 40px 0; }
+.cta-metric { text-align: center; padding: 24px 16px; }
+.cta-metric .metric-value { font-family: 'Oswald', sans-serif; font-size: 2.2rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.cta-metric .metric-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+/* Risk cards grid */
+.risk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.risk-card .risk-mitigation { color: #4ade80; border-top: 1px solid rgba(74, 222, 128, 0.15); padding-top: 12px; margin-top: 12px; }
+/* Team grid */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+/* Timeline phases */
+.phase-timeline { display: flex; flex-direction: column; gap: 32px; }
+.phase-item { display: flex; gap: 24px; }
+.phase-marker { display: flex; flex-direction: column; align-items: center; min-width: 40px; }
+.phase-dot { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #0a0f1a; font-size: 0.9rem; }
+.phase-line { width: 2px; flex: 1; background: linear-gradient(to bottom, var(--accent-orange), transparent); margin-top: 4px; }
+/* MOAT cards */
+.moat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px; }
+/* Comparison table improvements */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+.comparison-table th, .comparison-table td { padding: 14px 12px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.comparison-table th { font-family: 'Oswald', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); background: rgba(255,255,255,0.03); }
+.comparison-table td:first-child { text-align: left; font-weight: 600; color: var(--text-primary); }
+.comparison-table td:last-child { border-left: 2px solid var(--accent-orange); background: rgba(255, 107, 53, 0.05); }
+@media (max-width: 768px) {
+  .cta-metrics { grid-template-columns: 1fr; }
+  .risk-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .comparison-table { font-size: 0.75rem; }
+  .comparison-table th, .comparison-table td { padding: 8px 6px; }
+}
+.chart-big-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+.chart-context {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.chart-cagr-badge {
+  display: inline-block;
+  background: rgba(255,107,53,0.12);
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.market-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 28px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.stat-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-3px);
+}
+.stat-card .stat-icon { font-size: 1.8rem; margin-bottom: 12px; }
+.stat-card h4 { font-size: 1.05rem; margin-bottom: 8px; color: var(--text-primary); }
+.stat-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+.callout-box {
+  background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,184,0,0.05));
+  border: 1px solid rgba(255,107,53,0.2);
+  border-left: 4px solid var(--accent-orange);
+  border-radius: var(--radius-sm);
+  padding: 32px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.callout-box::before {
+  content: '!';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba(255,107,53,0.05);
+  line-height: 1;
+}
+.callout-box p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* =======================================================
+   SECTION 3: EL CONCEPTO FORGE
+   ======================================================= */
+.pillar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+.pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.pillar-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(255,107,53,0.1);
+}
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.pillar-card:hover::before { opacity: 1; }
+.pillar-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.pillar-card h3 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+.pillar-card .pillar-subtitle {
+  font-size: 0.85rem;
+  color: var(--accent-orange);
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+.pillar-card ul {
+  list-style: none;
+  padding: 0;
+}
+.pillar-card ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.pillar-card ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.pillar-tag {
+  display: inline-block;
+  background: rgba(255,107,53,0.12);
+  color: var(--accent-orange);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 14px;
+}
+
+/* =======================================================
+   SECTION 4: DEPORTES Y DISCIPLINAS
+   ======================================================= */
+.include-exclude {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.include-column, .exclude-column {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.include-column { border-top: 3px solid var(--accent-green); }
+.exclude-column { border-top: 3px solid var(--accent-red); }
+.include-column h3, .exclude-column h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.include-column h3 { color: var(--accent-green); }
+.exclude-column h3 { color: var(--accent-red); }
+.sport-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.sport-item:last-child { border-bottom: none; }
+.sport-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.sport-info h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+.sport-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* =======================================================
+   SECTION 5: POR QUÉ AHORA
+   ======================================================= */
+.timeline { position: relative; max-width: 820px; margin: 0 auto; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-orange), var(--accent-gold), rgba(255,184,0,0.1));
+}
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 40px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  left: 22px;
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-orange);
+  z-index: 1;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+.timeline-item:hover .timeline-dot {
+  background: var(--accent-orange);
+  box-shadow: 0 0 20px rgba(255,107,53,0.4);
+}
+.timeline-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 65px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  display: none;
+}
+.timeline-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 24px 28px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.timeline-item:hover .timeline-content {
+  border-color: var(--border-card-hover);
+  transform: translateX(6px);
+}
+.timeline-content h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.timeline-content p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.timeline-step-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* =======================================================
+   SECTION 6: MODELO DE NEGOCIO
+   ======================================================= */
+.revenue-visual { margin-bottom: 48px; }
+.revenue-bar-container {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: 32px;
+  overflow: hidden;
+}
+.revenue-bar-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.revenue-stacked-bar {
+  display: flex;
+  height: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.revenue-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0a0f1a;
+  transition: flex-basis 1s ease;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.revenue-segment:nth-child(1) { background: #FF6B35; }
+.revenue-segment:nth-child(2) { background: #FFB800; }
+.revenue-segment:nth-child(3) { background: #FF8F5E; }
+.revenue-segment:nth-child(4) { background: #FFC940; }
+.revenue-segment:nth-child(5) { background: #e05a2b; }
+.revenue-segment:nth-child(6) { background: #d4a300; }
+.revenue-legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.revenue-legend-item { display: flex; align-items: center; gap: 10px; }
+.revenue-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.revenue-legend-text { font-size: 0.82rem; color: var(--text-secondary); }
+.revenue-legend-pct { font-weight: 700; color: var(--text-primary); }
+
+.revenue-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 28px 24px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.revenue-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-3px);
+}
+
+/* Tier cards */
+.tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 48px; }
+.tier-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: 40px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.tier-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+.tier-card.tier-iron { border-top: 3px solid #8a8a8a; }
+.tier-card.tier-iron:hover { border-color: #8a8a8a; }
+.tier-card.tier-steel { border-top: 3px solid var(--accent-orange); }
+.tier-card.tier-steel:hover { border-color: var(--accent-orange); box-shadow: 0 16px 48px rgba(255,107,53,0.15); }
+.tier-card.tier-titanium { border-top: 3px solid var(--accent-gold); }
+.tier-card.tier-titanium:hover { border-color: var(--accent-gold); box-shadow: 0 16px 48px rgba(255,184,0,0.15); }
+.tier-badge-popular {
+  position: absolute;
+  top: 16px;
+  right: -32px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
+  color: #0a0f1a;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.tier-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+.tier-iron .tier-name { color: #8a8a8a; }
+.tier-steel .tier-name { color: var(--accent-orange); }
+.tier-titanium .tier-name { color: var(--accent-gold); }
+.tier-price {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.tier-price span { font-size: 1rem; font-weight: 400; color: var(--text-muted); }
+.tier-period { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 24px; }
+.tier-features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.tier-features li {
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding-left: 24px;
+  position: relative;
+}
+.tier-features li:last-child { border-bottom: none; }
+.tier-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 24px 16px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.kpi-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-3px);
+}
+.kpi-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+.kpi-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* =======================================================
+   SECTION 7: ANÁLISIS COMPETITIVO (Part 2)
+   ======================================================= */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(var(--glass-blur));
+}
+.comparison-table thead th {
+  background: rgba(255,255,255,0.04);
+  padding: 18px 16px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  text-align: center;
+  border-bottom: 1px solid var(--border-card);
+}
+.comparison-table thead th:first-child { text-align: left; }
+.comparison-table tbody td {
+  padding: 16px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.comparison-table tbody td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+.comparison-table tbody tr:hover { background: rgba(255,107,53,0.03); }
+.comparison-table .highlight-col {
+  background: rgba(255,107,53,0.05);
+  border-left: 1px solid rgba(255,107,53,0.1);
+  border-right: 1px solid rgba(255,107,53,0.1);
+}
+.comparison-table thead .highlight-col {
+  background: rgba(255,107,53,0.12);
+  color: var(--accent-orange);
+}
+.check-yes { color: var(--accent-green); font-weight: 700; }
+.check-no { color: var(--accent-red); opacity: 0.5; }
+.check-partial { color: var(--accent-gold); }
+
+/* =======================================================
+   SECTION 8: FINANCIALS (Part 2)
+   ======================================================= */
+.metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: 32px 24px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.metric-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255,107,53,0.08);
+}
+.metric-card .metric-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.metric-card .metric-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+.metric-card .metric-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.financial-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(var(--glass-blur));
+}
+.financial-table th, .financial-table td { padding: 14px 18px; font-size: 0.9rem; }
+.financial-table thead th {
+  background: rgba(255,255,255,0.04);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  text-align: right;
+  border-bottom: 1px solid var(--border-card);
+}
+.financial-table thead th:first-child { text-align: left; }
+.financial-table tbody td {
+  text-align: right;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.financial-table tbody td:first-child { text-align: left; font-weight: 600; color: var(--text-primary); }
+.financial-table tbody tr:last-child td { border-bottom: none; }
+.financial-table tbody tr:hover { background: rgba(255,107,53,0.03); }
+.financial-table .row-highlight { background: rgba(255,107,53,0.05); }
+.financial-table .row-highlight td { color: var(--text-primary); font-weight: 600; }
+
+/* =======================================================
+   SECTION 9: EXPANSION PLAN (Part 2)
+   ======================================================= */
+.expansion-phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.phase-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 36px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.phase-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-4px);
+}
+.phase-card::before {
+  content: attr(data-phase);
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.02);
+  line-height: 1;
+}
+.phase-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-orange);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.phase-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.phase-card ul { list-style: none; padding: 0; }
+.phase-card ul li {
+  padding: 6px 0;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  position: relative;
+}
+.phase-card ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+/* =======================================================
+   SECTION 10: RISK ANALYSIS (Part 2)
+   ======================================================= */
+.risk-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.risk-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 28px 24px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.risk-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-3px);
+}
+.risk-level {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+.risk-level.high { background: rgba(255,61,61,0.12); color: var(--accent-red); }
+.risk-level.medium { background: rgba(255,184,0,0.12); color: var(--accent-gold); }
+.risk-level.low { background: rgba(0,200,83,0.12); color: var(--accent-green); }
+.risk-card h4 { font-size: 1rem; margin-bottom: 8px; }
+.risk-card p { font-size: 0.88rem; color: var(--text-muted); }
+.risk-mitigation {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.85rem;
+  color: var(--accent-green);
+}
+.risk-mitigation::before {
+  content: '→ Mitigación: ';
+  font-weight: 600;
+}
+
+/* =======================================================
+   SECTION 11: TEAM (Part 2)
+   ======================================================= */
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.team-grid-row2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 66%; margin: 24px auto 0; }
+@media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); } .team-grid-row2 { grid-template-columns: 1fr; max-width: 100%; } }
+@media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 36px 28px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.team-card:hover {
+  border-color: var(--border-card-hover);
+  transform: translateY(-4px);
+}
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(255,184,0,0.2));
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.team-card h4 { font-size: 1.1rem; margin-bottom: 4px; }
+.team-card .team-role {
+  font-size: 0.82rem;
+  color: var(--accent-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.team-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+/* =======================================================
+   SECTION 12: CTA / INVESTMENT ASK (Part 2)
+   ======================================================= */
+.cta-section {
+  text-align: center;
+  padding: 140px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,107,53,0.08), transparent 70%);
+}
+.cta-amount {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 800px; margin: 40px auto; }
+.cta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 28px 20px;
+  text-align: center;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 48px;
+  padding: 18px 48px;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  color: #0a0f1a;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(255,107,53,0.3);
+}
+/* Conclusion section */
+.conclusion-container { text-align: center; }
+.big-quote { font-size: 1.4rem; line-height: 1.6; font-weight: 600; max-width: 800px; margin: 0 auto 24px; }
+.secondary-quote { font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary); max-width: 700px; margin: 0 auto 32px; }
+.conclusion-metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin: 40px 0; }
+.conclusion-metrics .metric-card { padding: 24px 12px; }
+.closing-statement { max-width: 700px; margin: 32px auto; padding: 32px; font-size: 1.1rem; line-height: 1.7; }
+.cta-wrapper { margin-top: 32px; }
+@media (max-width: 768px) {
+  .conclusion-metrics { grid-template-columns: repeat(2, 1fr); }
+  .big-quote { font-size: 1.1rem; }
+}
+
+/* =======================================================
+   PARALLAX DIVIDERS
+   ======================================================= */
+.parallax-divider {
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.parallax-divider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,107,53,0.04), rgba(255,184,0,0.02));
+  z-index: 0;
+}
+.parallax-divider::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--bg-primary) 0%, transparent 20%, transparent 80%, var(--bg-primary) 100%);
+  z-index: 1;
+}
+.parallax-divider .divider-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 24px;
+}
+.parallax-divider .divider-quote {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+  line-height: 1.4;
+}
+.parallax-divider .divider-stat {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.parallax-divider .divider-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+.parallax-mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,107,53,0.02) 39px, rgba(255,107,53,0.02) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,184,0,0.02) 39px, rgba(255,184,0,0.02) 40px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* =======================================================
+   FOOTER (Part 2)
+   ======================================================= */
+footer {
+  padding: 60px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+}
+footer p { font-size: 0.82rem; color: var(--text-muted); }
+
+/* =======================================================
+   COUNTER ANIMATION
+   ======================================================= */
+.counter[data-target] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* =======================================================
+   RESPONSIVE — TABLET (768px)
+   ======================================================= */
+@media (max-width: 768px) {
+  :root { --section-padding: 80px 0; }
+  .container { padding: 0 20px; }
+
+  .hero-metrics { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .hero-title { letter-spacing: -1px; }
+  .hero-athletic { letter-spacing: 8px; }
+
+  .market-charts { grid-template-columns: 1fr; }
+  .market-stats { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: 1fr; }
+  .include-exclude { grid-template-columns: 1fr; }
+  .tier-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+  .risk-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .expansion-phases { grid-template-columns: 1fr; }
+  .cta-grid { grid-template-columns: 1fr; max-width: 320px; }
+  .revenue-legend { grid-template-columns: repeat(2, 1fr); }
+
+  .section-number { font-size: 8rem; top: 20px; left: -10px; }
+  .section-header { margin-bottom: 48px; }
+
+  .comparison-table { font-size: 0.8rem; display: block; overflow-x: auto; }
+  .financial-table { display: block; overflow-x: auto; }
+  .parallax-divider { height: 220px; }
+
+  .timeline::before { left: 20px; }
+  .timeline-item { padding-left: 56px; }
+  .timeline-dot { left: 10px; width: 18px; height: 18px; }
+}
+
+/* =======================================================
+   RESPONSIVE — MOBILE (480px)
+   ======================================================= */
+@media (max-width: 480px) {
+  :root { --section-padding: 60px 0; }
+  .container { padding: 0 16px; }
+  html { font-size: 14px; }
+
+  .hero-metrics { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hero-metric-card { padding: 18px 10px; }
+  .hero-badge { font-size: 0.7rem; padding: 6px 16px; }
+  .hero-athletic { letter-spacing: 4px; }
+
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .revenue-stacked-bar { height: 40px; }
+  .revenue-legend { grid-template-columns: 1fr; }
+
+  .section-number { font-size: 5rem; }
+  .pillar-card { padding: 28px 20px; }
+  .tier-card { padding: 28px 20px; }
+  .timeline-content { padding: 18px 20px; }
+
+  .parallax-divider { height: 180px; }
+}
+
+/* =======================================================
+   PRINT STYLES
+   ======================================================= */
+@media print {
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  * { color: #000 !important; -webkit-text-fill-color: #000 !important; background: transparent !important; border-color: #ccc !important; box-shadow: none !important; text-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
+  .hero { min-height: auto; padding: 40px 0; page-break-after: always; }
+  .hero::before, .hero::after { display: none; }
+  .scroll-indicator { display: none; }
+  .parallax-divider { display: none; }
+  .parallax-mesh { display: none; }
+
+  .section { padding: 30px 0; page-break-inside: avoid; }
+  .section-number { display: none; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .chart-bar { width: var(--bar-width) !important; background: #333 !important; color: #fff !important; }
+
+  .glass, .pillar-card, .tier-card, .metric-card, .risk-card, .team-card, .revenue-card, .stat-card, .kpi-card, .chart-container {
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+  }
+
+  .hero-title, .gradient-text, .hero-metric-value, .kpi-value, .metric-card .metric-value, .chart-big-number, .parallax-divider .divider-stat, .cta-amount {
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  a { text-decoration: underline; }
+  .grid-2, .grid-3, .grid-4, .pillar-grid, .market-charts, .market-stats, .tier-grid, .kpi-grid, .metric-grid, .risk-grid, .team-grid, .expansion-phases, .include-exclude, .revenue-legend {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .hero-metrics { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* =======================================================
+   UTILITY
+   ======================================================= */
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-48 { margin-bottom: 48px; }
+.mb-64 { margin-bottom: 64px; }
+.text-center { text-align: center; }
+.text-muted { color: var(--text-muted); }
+.text-accent { color: var(--accent-orange); }
+.fw-700 { font-weight: 700; }
+
+/* =======================================================
+   PART 2 ADDITIONAL STYLES
+   ======================================================= */
+.section-title { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600; line-height: 1.15; color: var(--text-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; text-align: center; }
+.section-title .accent { background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.section-subtitle { text-align: center; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 48px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+.glass-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); padding: 32px; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); }
+.glass-card:hover { border-color: var(--border-card-hover); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(255,107,53,0.08); }
+.card-title { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-primary); margin-bottom: 24px; }
+
+/* Phase Timeline Part 2 */
+.timeline-line { display: none; }
+.timeline-phase { margin-bottom: 32px; }
+.phase-marker { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold)); display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.2rem; color: #0a0f1a; margin-bottom: 20px; }
+.phase-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-orange); font-weight: 700; margin-bottom: 8px; }
+.phase-title { font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.phase-years { font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; display: block; margin-bottom: 16px; }
+.phase-details { list-style: none; padding: 0; }
+.phase-details li { padding: 6px 0 6px 20px; font-size: 0.9rem; color: var(--text-secondary); position: relative; }
+.phase-details li::before { content: '›'; position: absolute; left: 0; color: var(--accent-orange); font-weight: 700; font-size: 1.1rem; }
+.phase-card { padding: 36px 28px; }
+
+/* Team Part 2 */
+.team-avatar span { font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; color: #0a0f1a; }
+.team-name { font-family: 'Oswald', sans-serif; font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; text-align: center; }
+.team-role { display: block; font-size: 0.78rem; color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; text-align: center; }
+.team-stats { list-style: none; padding: 0; text-align: left; }
+.team-stats li { padding: 5px 0 5px 18px; font-size: 0.85rem; color: var(--text-secondary); position: relative; line-height: 1.5; }
+.team-stats li::before { content: '›'; position: absolute; left: 0; color: var(--accent-orange); font-weight: 700; }
+.team-quote { font-size: 0.82rem; font-style: italic; color: var(--accent-gold); text-align: center; margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+.team-quote::before { content: '"'; }
+.team-quote::after { content: '"'; }
+.team-card { text-align: center; }
+
+/* Track Record */
+.track-record { text-align: center; }
+.track-stats { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; margin: 24px 0; }
+.track-stat { text-align: center; }
+.track-stat-value { font-family: 'Oswald', sans-serif; font-size: 2.4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.track-stat-suffix { font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 600; background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.track-stat-label { display: block; font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.track-stat-arrow { font-size: 1.5rem; color: var(--accent-orange); }
+.track-footer { font-size: 0.88rem; color: var(--text-muted); margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Risk Cards Part 2 */
+.risk-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.risk-icon { font-size: 1.4rem; }
+.risk-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+.risk-separator { height: 1px; background: rgba(255,255,255,0.06); margin: 12px 0; }
+.risk-mitigation { font-size: 0.85rem; color: var(--accent-green); line-height: 1.5; }
+.risk-mitigation::before { content: '→ Mitigación: '; font-weight: 700; }
+
+/* MOAT Cards */
+.moat-card { text-align: center; padding: 28px 20px; }
+.moat-icon { font-size: 2rem; margin-bottom: 12px; }
+.moat-card h4 { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.moat-card p { font-size: 0.82rem; color: var(--text-muted); }
+
+/* Cashflow note */
+.cashflow-note { display: flex; align-items: center; gap: 10px; margin-top: 20px; padding: 16px; background: rgba(0,200,83,0.08); border: 1px solid rgba(0,200,83,0.2); border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--accent-green); font-weight: 600; }
+.cashflow-icon { font-size: 1.2rem; }
+
+/* Conclusion Part 2 */
+.conclusion-container { text-align: center; }
+.conclusion-quote { margin-bottom: 24px; }
+.big-quote { font-family: 'Oswald', sans-serif; font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.5; font-weight: 600; max-width: 800px; margin: 0 auto; }
+.secondary-quote { font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary); max-width: 700px; margin: 0 auto 32px; }
+.conclusion-metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin: 40px 0; }
+@media (max-width: 768px) { .conclusion-metrics { grid-template-columns: repeat(2, 1fr); } }
+.closing-statement { max-width: 700px; margin: 32px auto; padding: 28px; font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); }
+.cta-wrapper { margin-top: 32px; }
+.cta-arrow { margin-left: 8px; }
+
+/* Footer Part 2 */
+.footer-inner { max-width: 600px; margin: 0 auto; }
+.footer-logo { font-family: 'Oswald', sans-serif; font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.footer-logo .accent { color: var(--accent-orange); }
+.footer-tagline { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 16px; }
+.footer-divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold)); margin: 16px auto; }
+.footer-confidential { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+.footer-contact { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
+.footer-brand { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Table wrapper */
+.table-wrapper { padding: 0; overflow: hidden; }
+.table-scroll { overflow-x: auto; }
+
+/* Rating icons in table */
+.rating-best { color: var(--accent-green); font-weight: 700; }
+.rating-yes { color: var(--accent-green); }
+.rating-mid { color: var(--accent-gold); }
+.rating-no { color: var(--accent-red); opacity: 0.5; }
+.forge-col { background: rgba(255,107,53,0.05) !important; border-left: 1px solid rgba(255,107,53,0.15); border-right: 1px solid rgba(255,107,53,0.15); }
+.factor-col { text-align: left !important; font-weight: 600; color: var(--text-primary); }
+
+/* Stagger children */
+.stagger-children > * { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.stagger-children > .visible { opacity: 1; transform: translateY(0); }
+
+/* Digital-Experiencial section */
+.digital-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 768px) { .digital-grid { grid-template-columns: 1fr; } }
+.digital-card { padding: 36px 32px; }
+.digital-card .digital-icon { font-size: 2.4rem; margin-bottom: 16px; display: inline-block; }
+.digital-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+.digital-card .digital-subtitle { font-size: 0.85rem; color: var(--accent-orange); font-weight: 600; margin-bottom: 16px; }
+.digital-card ul { list-style: none; padding: 0; }
+.digital-card ul li { padding: 8px 0 8px 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; position: relative; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.digital-card ul li:last-child { border-bottom: none; }
+.digital-card ul li::before { content: '›'; position: absolute; left: 0; color: var(--accent-orange); font-weight: 700; font-size: 1.1rem; }
+.digital-tag { display: inline-block; background: rgba(255,107,53,0.12); color: var(--accent-orange); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; margin-top: 14px; }
+
+/* Cost detail callout */
+.cost-callout { background: rgba(255,107,53,0.06); border: 1px solid rgba(255,107,53,0.15); border-left: 4px solid var(--accent-orange); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 28px 32px; margin-top: 32px; }
+.cost-callout h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
+.cost-callout ul { list-style: none; padding: 0; }
+.cost-callout ul li { padding: 4px 0; font-size: 0.85rem; color: var(--text-secondary); }
+.cost-callout .cost-total { font-weight: 700; color: var(--accent-orange); padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 8px; }
+.cost-callout .cost-validation { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+.cost-callout .cost-validation h5 { font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 8px; }
+
+/* Investor note */
+.investor-note { background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.15); border-left: 4px solid #3b82f6; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 20px 24px; margin-top: 24px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; }
+.investor-note strong { color: #60a5fa; }
+</style>
+</head>
+<body>
+
+<!-- ===================================================
+     SECTION 1: HERO
+     =================================================== -->
+<section class="hero" id="hero">
+  <div class="hero-badge reveal">Propuesta para Grupo Inversor 2026</div>
+
+  <h1 class="hero-title reveal reveal-delay-1">FORGE</h1>
+  <div class="hero-athletic reveal reveal-delay-2">Athletic Club</div>
+  <p class="hero-tagline reveal reveal-delay-3">"Where Athletes Are Made"</p>
+  <p class="hero-desc reveal reveal-delay-4">La primera cadena de <strong style="color:#fff;">Performance Clubs</strong> de Europa — Funcional, Competitivo, Social</p>
+
+  <div class="hero-metrics reveal reveal-delay-5">
+    <div class="hero-metric-card">
+      <div class="hero-metric-value">€15M+</div>
+      <div class="hero-metric-label">Mercado Objetivo</div>
+    </div>
+    <div class="hero-metric-card">
+      <div class="hero-metric-value">28-48%</div>
+      <div class="hero-metric-label">TIR (cons. / opt.)</div>
+    </div>
+    <div class="hero-metric-card">
+      <div class="hero-metric-value">3</div>
+      <div class="hero-metric-label">Centros en 3 Años</div>
+    </div>
+    <div class="hero-metric-card">
+      <div class="hero-metric-value">~€400K</div>
+      <div class="hero-metric-label">Inversión Flagship</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="chevron"></div>
+  </div>
+</section>
+
+
+<!-- ===================================================
+     SECTION 2: LA OPORTUNIDAD DE MERCADO
+     =================================================== -->
+<section class="section" id="oportunidad">
+  <span class="section-number">01</span>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="gradient-text">La Oportunidad de Mercado</h2>
+      <p class="subtitle">Un mercado masivo, en crecimiento exponencial, sin líder europeo</p>
+    </div>
+
+    <!-- Market Charts -->
+    <div class="market-charts mb-48">
+      <div class="chart-container reveal reveal-delay-1">
+        <h4>Fitness Funcional Global</h4>
+        <div class="chart-bars">
+          <div class="chart-bar-row">
+            <span class="chart-bar-label">2025</span>
+            <div class="chart-bar-track">
+              <div class="chart-bar" style="--bar-width: 47%;">$13.1B</div>
+            </div>
+          </div>
+          <div class="chart-bar-row">
+            <span class="chart-bar-label">2033</span>
+            <div class="chart-bar-track">
+              <div class="chart-bar" style="--bar-width: 100%;">$28B</div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-cagr-badge">📈 10% CAGR</div>
+      </div>
+
+      <div class="chart-container reveal reveal-delay-2">
+        <h4>Crecimiento Hyrox</h4>
+        <div class="chart-bars">
+          <div class="chart-bar-row">
+            <span class="chart-bar-label">2017</span>
+            <div class="chart-bar-track">
+              <div class="chart-bar" style="--bar-width: 5%;">700</div>
+            </div>
+          </div>
+          <div class="chart-bar-row">
+            <span class="chart-bar-label">2025</span>
+            <div class="chart-bar-track">
+              <div class="chart-bar" style="--bar-width: 100%;">650K</div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-cagr-badge">💰 $140M revenue</div>
+      </div>
+
+      <div class="chart-container reveal reveal-delay-3">
+        <h4>Europa — Mercado Fitness</h4>
+        <div class="chart-big-number">€14.33B</div>
+        <p class="chart-context">Mercado europeo de fitness 2025. Segmento boutique creciendo <strong style="color:var(--accent-orange);">2× más rápido</strong> que gimnasios convencionales.</p>
+        <div class="chart-cagr-badge">🚀 Boutique = futuro</div>
+      </div>
+    </div>
+
+    <!-- Market Stats -->
+    <div class="market-stats mb-48">
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-icon">🇪🇸</div>
+        <h4>España: Mercado en Explosión</h4>
+        <p>Running, trail, pádel y funcional dominan. Cultura deportiva en máximo histórico post-COVID.</p>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-icon">🧊</div>
+        <h4>Recovery & Wellness</h4>
+        <p>Tendencia #1 en fitness 2026. Cold plunge, sauna, contrast therapy — de nicho a mainstream.</p>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-icon">🏋️</div>
+        <h4>Fitness Competitivo</h4>
+        <p>Hyrox, CrossFit, OCR — los atletas quieren medir, competir y mejorar. Gamification del ejercicio.</p>
+      </div>
+    </div>
+
+    <!-- Callout -->
+    <div class="callout-box reveal">
+      <p>"NO existe una cadena que unifique <span class="gradient-text" style="font-weight:800;">entrenamiento funcional + competición + recovery + comunidad</span> bajo un mismo techo en Europa"</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PARALLAX DIVIDER ===== -->
+<div class="parallax-divider">
+  <div class="parallax-mesh"></div>
+  <div class="divider-content">
+    <div class="divider-stat">650,000</div>
+    <div class="divider-sub">atletas Hyrox en 2025 — y cero tienen un "home gym" donde entrenar, competir y recuperar</div>
+  </div>
+</div>
+
+
+<!-- ===================================================
+     SECTION 3: EL CONCEPTO FORGE
+     =================================================== -->
+<section class="section" id="concepto">
+  <span class="section-number">02</span>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="gradient-text">El Concepto FORGE</h2>
+      <p class="subtitle">No es un gimnasio. Es un ecosistema de rendimiento.</p>
+    </div>
+
+    <p class="text-center text-muted mb-48 reveal" style="font-size:1.05rem; max-width:600px; margin-left:auto; margin-right:auto;">
+      <strong style="color:var(--accent-orange);">FORGE</strong> = <strong style="color:var(--text-primary);">F</strong>unctional <strong style="color:var(--text-primary);">O</strong>ptimized <strong style="color:var(--text-primary);">R</strong>acing &amp; <strong style="color:var(--text-primary);">G</strong>rowth <strong style="color:var(--text-primary);">E</strong>ngine
+    </p>
+
+    <div class="pillar-grid">
+      <!-- PILAR 1 -->
+      <div class="pillar-card reveal reveal-delay-1">
+        <div class="pillar-icon">🏟️</div>
+        <h3>The Training Floor</h3>
+        <div class="pillar-subtitle">500m²+ de rendimiento puro</div>
+        <ul>
+          <li>Multi-zona funcional: strength rigs, sleds, ski ergs, rowing, battle ropes</li>
+          <li><strong style="color:var(--accent-gold);">Pista indoor 100m integrada (circuito en loop) — THE DIFFERENTIATOR</strong></li>
+          <li>Zonas: Hyrox Prep, Functional Strength, Endurance, Mobility</li>
+          <li>Clases grupales (máx 20 personas) + open gym</li>
+          <li>Equipamiento: Concept2, Assault, Rogue, SkiErg</li>
+        </ul>
+        <span class="pillar-tag">Core Revenue</span>
+      </div>
+
+      <!-- PILAR 2 -->
+      <div class="pillar-card reveal reveal-delay-2">
+        <div class="pillar-icon">🏆</div>
+        <h3>The FORGE Test™</h3>
+        <div class="pillar-subtitle">IP Propia — Nuestro Moat Competitivo</div>
+        <ul>
+          <li>Benchmark competitivo estandarizado y propietario</li>
+          <li>Format: 8 estaciones + running segments, 45 min, puntuación universal</li>
+          <li>Rankings globales: Iron → Steel → Titanium → Obsidian</li>
+          <li>Mensual en todos los centros FORGE</li>
+          <li>Potencial de LICENCIAR formato a terceros</li>
+          <li>Eventos trimestrales FORGE GAMES → Campeonato anual</li>
+        </ul>
+        <span class="pillar-tag">IP / Moat</span>
+      </div>
+
+      <!-- PILAR 3 -->
+      <div class="pillar-card reveal reveal-delay-3">
+        <div class="pillar-icon">🧊</div>
+        <h3>The Recovery Lab</h3>
+        <div class="pillar-subtitle">100m²+ — De nicho a mainstream</div>
+        <ul>
+          <li>Cold plunge pools (3-4°C)</li>
+          <li>Sauna finlandesa + infrarroja</li>
+          <li>Circuitos de contrast therapy</li>
+          <li>Movilidad/stretching guiada</li>
+          <li>Hyperbaric oxygen (opcional premium)</li>
+          <li>Pay-per-use o incluido en tier premium</li>
+        </ul>
+        <span class="pillar-tag">High-Margin Upsell</span>
+      </div>
+
+      <!-- PILAR 4 -->
+      <div class="pillar-card reveal reveal-delay-4">
+        <div class="pillar-icon">🤝</div>
+        <h3>The Social Club</h3>
+        <div class="pillar-subtitle">Comunidad = Retención</div>
+        <ul>
+          <li>Café/juice bar con nutrición deportiva</li>
+          <li>Zona lounge + coworking</li>
+          <li>Eventos sociales, workshops, meet-ups</li>
+          <li>App comunitaria: chat, challenges, rankings</li>
+          <li>Corporate wellness partnerships</li>
+        </ul>
+        <span class="pillar-tag">Retention Engine</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PARALLAX DIVIDER ===== -->
+<div class="parallax-divider">
+  <div class="parallax-mesh"></div>
+  <div class="divider-content">
+    <div class="divider-quote">"El gap entre el CrossFit box sucio y el gym premium aburrido… es donde FORGE vive."</div>
+  </div>
+</div>
+
+
+<!-- ===================================================
+     SECTION 4: DEPORTES Y DISCIPLINAS
+     =================================================== -->
+<section class="section" id="deportes">
+  <span class="section-number">03</span>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="gradient-text">Deportes y Disciplinas</h2>
+      <p class="subtitle">Foco quirúrgico: solo lo que potencia performance</p>
+    </div>
+
+    <div class="include-exclude">
+      <!-- INCLUIR -->
+      <div class="include-column reveal reveal-delay-1">
+        <h3>✅ Incluir</h3>
+
+        <div class="sport-item">
+          <span class="sport-icon">🏋️</span>
+          <div class="sport-info">
+            <h4>Entrenamiento Funcional</h4>
+            <p>CrossFit-style, más accesible y menos intimidante</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🔥</span>
+          <div class="sport-info">
+            <h4>Preparación Hyrox</h4>
+            <p>1.3M atletas proyectados 2026 — la competición del momento</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🏃</span>
+          <div class="sport-info">
+            <h4>Running / Endurance</h4>
+            <p>Pista indoor + trail groups outdoor — del 5K al ultra</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">💪</span>
+          <div class="sport-info">
+            <h4>Strength Training</h4>
+            <p>Tendencia #1 global — fuerza como base de rendimiento</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🧘</span>
+          <div class="sport-info">
+            <h4>Mobility / Yoga Funcional</h4>
+            <p>Movilidad atlética, no espiritual — prevención de lesiones</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🥊</span>
+          <div class="sport-info">
+            <h4>Boxing Funcional</h4>
+            <p>Cardio intenso, sin contacto — accesible para todos</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🏔️</span>
+          <div class="sport-info">
+            <h4>OCR Prep</h4>
+            <p>Spartan, Tough Mudder — preparación específica para carreras de obstáculos</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NO INCLUIR -->
+      <div class="exclude-column reveal reveal-delay-2">
+        <h3>❌ No Incluir</h3>
+
+        <div class="sport-item">
+          <span class="sport-icon">🎾</span>
+          <div class="sport-info">
+            <h4>Pádel</h4>
+            <p>Infraestructura enorme, mercado saturándose — no core de performance</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🚴</span>
+          <div class="sport-info">
+            <h4>Spinning / Cycling</h4>
+            <p>Comoditizado, Peloton effect — margen cero de diferenciación</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🧘‍♀️</span>
+          <div class="sport-info">
+            <h4>Yoga Tradicional</h4>
+            <p>No encaja con el posicionamiento de performance atlético</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🏗️</span>
+          <div class="sport-info">
+            <h4>Máquinas Musculación Clásicas</h4>
+            <p>No es gym convencional — funcional over máquinas aisladas</p>
+          </div>
+        </div>
+
+        <div class="sport-item">
+          <span class="sport-icon">🏊</span>
+          <div class="sport-info">
+            <h4>Piscina</h4>
+            <p>Inversión desproporcionada vs. retorno — €500K+ solo en infraestructura</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PARALLAX DIVIDER ===== -->
+<div class="parallax-divider">
+  <div class="parallax-mesh"></div>
+  <div class="divider-content">
+    <div class="divider-stat">1.3M</div>
+    <div class="divider-sub">atletas Hyrox proyectados en 2026 — todos necesitan un lugar donde entrenar</div>
+  </div>
+</div>
+
+
+<!-- ===================================================
+     SECTION 5: POR QUÉ AHORA — TIMING PERFECTO
+     =================================================== -->
+<section class="section" id="timing">
+  <span class="section-number">04</span>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="gradient-text">Por Qué Ahora</h2>
+      <p class="subtitle">Timing perfecto — 8 factores convergentes</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 01</span>
+          <h4>Hyrox demostró el mercado</h4>
+          <p>De 700 participantes a 650K en 7 años. Fitness competitivo accesible es un mercado masivo y validado.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 02</span>
+          <h4>CrossFit ha perdido momentum</h4>
+          <p>Controversias, percepción de lesiones, imagen elitista. El mercado busca alternativas más accesibles y profesionales.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 03</span>
+          <h4>F45 fracasó: lección clave</h4>
+          <p>Solo clases, sin comunidad ni competición. Demostró que el formato "solo clases" no retiene — falta el componente social y competitivo.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 04</span>
+          <h4>Recovery/wellness en punto de inflexión</h4>
+          <p>Cold plunge y sauna pasaron de biohacker niche a tendencia mainstream. El momento de integrar es ahora.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-5">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 05</span>
+          <h4>España post-COVID: boom fitness</h4>
+          <p>Explosión de running, trail, funcional. Cultura deportiva española en máximo histórico — el mercado está listo.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-6">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 06</span>
+          <h4>No existe "Hyrox Home"</h4>
+          <p>650K atletas que entrenan PARA Hyrox pero no tienen un centro especializado. Entrenar + competir + recuperar bajo un techo.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 07</span>
+          <h4>Millennials/GenZ quieren más</h4>
+          <p>Comunidad + propósito + datos + experiencia premium. No van al gym — van a un sitio que les representa.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-step-num">Factor 08</span>
+          <h4>El gap: algo intermedio y aspiracional</h4>
+          <p>Entre el CrossFit box sucio y el gym premium aburrido — falta algo INTERMEDIO y ASPIRACIONAL. Ese espacio es FORGE.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PARALLAX DIVIDER ===== -->
+<div class="parallax-divider">
+  <div class="parallax-mesh"></div>
+  <div class="divider-content">
+    <div class="divider-quote">"Entre el box de CrossFit y el gym premium aburrido, falta algo intermedio y aspiracional."</div>
+  </div>
+</div>
+
+
+<!-- ===================================================
+     SECTION 6: MODELO DE NEGOCIO — REVENUE STREAMS
+     =================================================== -->
+<section class="section" id="modelo">
+  <span class="section-number">05</span>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="gradient-text">Modelo de Negocio</h2>
+      <p class="subtitle">6 revenue streams diversificados — membresías como core</p>
+    </div>
+
+    <!-- Revenue Visual -->
+    <div class="revenue-visual reveal">
+      <div class="revenue-bar-container">
+        <div class="revenue-bar-title">Revenue Mix por Fuente</div>
+        <div class="revenue-stacked-bar">
+          <div class="revenue-segment" style="flex-basis:65%;">Membresías 65%</div>
+          <div class="revenue-segment" style="flex-basis:15%;">Recovery 15%</div>
+          <div class="revenue-segment" style="flex-basis:8%;">Eventos 8%</div>
+          <div class="revenue-segment" style="flex-basis:5%;">Corp. 5%</div>
+          <div class="revenue-segment" style="flex-basis:4%;">Café 4%</div>
+          <div class="revenue-segment" style="flex-basis:3%;">Digital 3%</div>
+        </div>
+        <div class="revenue-legend">
+          <div class="revenue-legend-item">
+            <div class="revenue-legend-dot" style="background:#FF6B35;"></div>
+            <span class="revenue-legend-text"><span class="revenue-legend-pct">65%</span> Membresías — Base €89, Performance €129, Elite €159</span>
+          </div>
+          <div class="revenue-legend-item">
+            <div class="revenue-legend-dot" style="background:#FFB800;"></div>
+            <span class="revenue-legend-text"><span class="revenue-legend-pct">15%</span> Recovery Lab — Pay-per-use €15-25/sesión o tier Elite</span>
+          </div>
+          <div class="revenue-legend-item">
+            <div class="revenue-legend-dot" style="background:#FF8F5E;"></div>
+            <span class="revenue-legend-text"><span class="revenue-legend-pct">8%</span> Eventos/Competiciones — FORGE Test entries, FORGE Games</span>
+          </div>
+          <div class="revenue-legend-item">
+            <div class="revenue-legend-dot" style="background:#FFC940;"></div>
+            <span class="revenue-legend-text"><span class="revenue-legend-pct">5%</span> Corporate Wellness — Programas empresa, team buildings</span>
+          </div>
+          <div class="revenue-legend-item">
+            <div class="revenue-legend-dot" style="background:#e05a2b;"></div>
+            <span class="revenue-legend-text"><span class="revenue-legend-pct">4%</span> Café/Nutrición — Smoothies, suplementos, merch</span>
+          </div>
+          <div class="revenue-legend-item">
+            <div class="revenue-legend-dot" style="background:#d4a300;"></div>
+            <span class="revenue-legend-text"><span class="revenue-legend-pct">3%</span> Digital/Licencias — App premium, licensing FORGE Test</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier Cards -->
+    <div class="tier-grid mb-48">
+      <div class="tier-card tier-iron reveal reveal-delay-1">
+        <div class="tier-name">Iron</div>
+        <div class="tier-price">€89<span>/mes</span></div>
+        <div class="tier-period">Sin permanencia</div>
+        <ul class="tier-features">
+          <li>Open gym acceso completo</li>
+          <li>3 clases grupales / semana</li>
+          <li>App comunitaria + rankings</li>
+          <li>Acceso zona social</li>
+        </ul>
+      </div>
+
+      <div class="tier-card tier-steel reveal reveal-delay-2">
+        <div class="tier-badge-popular">Popular</div>
+        <div class="tier-name">Steel</div>
+        <div class="tier-price">€129<span>/mes</span></div>
+        <div class="tier-period">Sin permanencia</div>
+        <ul class="tier-features">
+          <li>Clases grupales ilimitadas</li>
+          <li>FORGE Test™ mensual incluido</li>
+          <li>2 sesiones Recovery Lab / mes</li>
+          <li>Prioridad reserva clases</li>
+          <li>Descuentos eventos FORGE Games</li>
+        </ul>
+      </div>
+
+      <div class="tier-card tier-titanium reveal reveal-delay-3">
+        <div class="tier-name">Titanium</div>
+        <div class="tier-price">€159<span>/mes</span></div>
+        <div class="tier-period">Sin permanencia</div>
+        <ul class="tier-features">
+          <li>Todo en Steel incluido</li>
+          <li>Recovery Lab ilimitado</li>
+          <li>Plan nutrición personalizado</li>
+          <li>Prioridad en todos los eventos</li>
+          <li>1 sesión personal training / mes</li>
+          <li>Acceso early a nuevos centros</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="section-header reveal mb-32" style="margin-bottom:32px;">
+      <h3 style="font-size:1.4rem; letter-spacing:2px; text-transform:uppercase;">KPIs Objetivo</h3>
+    </div>
+    <div class="kpi-grid reveal">
+      <div class="kpi-card">
+        <div class="kpi-value">200</div>
+        <div class="kpi-label">Break-even<br><small style="color:var(--text-muted);font-size:0.68rem;text-transform:none;">socios (mes 6-8)</small></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">500+</div>
+        <div class="kpi-label">Target Maduro<br><small style="color:var(--text-muted);font-size:0.68rem;text-transform:none;">socios (mes 18-24)</small></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">€115</div>
+        <div class="kpi-label">ARPU Mensual</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">&lt;6%</div>
+        <div class="kpi-label">Churn Mensual</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">&gt;50%</div>
+        <div class="kpi-label">Conversión Trial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PARALLAX DIVIDER ===== -->
+<div class="parallax-divider">
+  <div class="parallax-mesh"></div>
+  <div class="divider-content">
+    <div class="divider-stat">€115</div>
+    <div class="divider-sub">ARPU mensual × 450-600 socios = €621K-€828K ARR por centro en madurez (año 5)</div>
+  </div>
+</div>
+
+
+<!-- ===================================================
+     SCROLL REVEAL + BAR ANIMATION SCRIPT
+     =================================================== -->
+<script>
+// Intersection Observer for reveal animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Animate chart bars inside this element
+      entry.target.querySelectorAll('.chart-bar').forEach(bar => {
+        setTimeout(() => bar.classList.add('animated'), 300);
+      });
+    }
+  });
+}, observerOptions);
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Also observe chart containers directly
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.chart-bar').forEach(bar => {
+        setTimeout(() => bar.classList.add('animated'), 400);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.chart-container').forEach(el => barObserver.observe(el));
+
+// Counter animation
+function animateCounters() {
+  document.querySelectorAll('.counter[data-target]').forEach(counter => {
+    const target = parseFloat(counter.dataset.target);
+    const prefix = counter.dataset.prefix || '';
+    const suffix = counter.dataset.suffix || '';
+    const decimals = counter.dataset.decimals ? parseInt(counter.dataset.decimals) : 0;
+    const duration = 2000;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = (target * eased).toFixed(decimals);
+      counter.textContent = prefix + current + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// Trigger counters on visibility
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      counterObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+const firstCounter = document.querySelector('.counter[data-target]');
+if (firstCounter) counterObserver.observe(firstCounter);
+</script>
+
+<!-- PART 1 END -->
+
+<!-- PART 2 START -->
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: PLAN FINANCIERO — POR CENTRO      -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="financiero">
+      <div class="section-number">06</div>
+      <div class="container">
+        <h2 class="section-title">Plan Financiero <span class="accent">— Por Centro</span></h2>
+        <p class="section-subtitle">Inversión flagship Girona: <strong style="color:#FF6B35;">€380,000 - €420,000</strong> (nave industrial 800-1000m²)</p>
+
+        <div class="two-col" style="gap:3rem;">
+          <!-- Investment Breakdown -->
+          <div class="glass-card" data-animate>
+            <h3 class="card-title">Desglose de Inversión — Flagship Girona</h3>
+            <div class="chart-container">
+              <div class="chart-row">
+                <span class="chart-label">Obra civil + adecuación</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="100%" data-value="€110K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Equipamiento funcional</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="82%" data-value="€90K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Recovery Lab (saunas, cold plunge…)</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="55%" data-value="€60K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Pista indoor running</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="27%" data-value="€30K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Café / Zona social</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="18%" data-value="€20K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Tech (app, sensores, pantallas)</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="14%" data-value="€15K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Branding + señalización</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="9%" data-value="€10K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label">Working capital (6 meses)</span>
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="width:0%" data-width="55%" data-value="€60K"></div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <span class="chart-label" style="font-weight:700; color:var(--accent-orange);">TOTAL</span>
+                <div class="chart-bar-wrapper" style="background:none;">
+                  <span style="font-family:'Oswald',sans-serif; font-size:1.3rem; font-weight:700; color:var(--accent-orange);">~€395K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- P&L Projection — 5 Años, Dual Scenario -->
+          <div class="glass-card" data-animate>
+            <h3 class="card-title">P&L a 5 Años — Por Centro (Flagship Girona)</h3>
+            <div style="overflow-x:auto;">
+              <table class="financial-table" style="min-width:600px;">
+                <thead>
+                  <tr>
+                    <th style="text-align:left;"></th>
+                    <th colspan="2" style="text-align:center; border-bottom:2px solid var(--accent-orange);">📉 Conservador</th>
+                    <th colspan="2" style="text-align:center; border-bottom:2px solid var(--accent-green);">📈 Optimista</th>
+                  </tr>
+                  <tr>
+                    <th style="text-align:left;">Año</th>
+                    <th>Socios</th>
+                    <th>Revenue</th>
+                    <th>Socios</th>
+                    <th>Revenue</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Año 1</strong></td>
+                    <td>250 avg</td>
+                    <td>€345K</td>
+                    <td>350 avg</td>
+                    <td>€483K</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Año 2</strong></td>
+                    <td>350</td>
+                    <td>€483K</td>
+                    <td>450</td>
+                    <td>€621K</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Año 3</strong></td>
+                    <td>400</td>
+                    <td>€552K</td>
+                    <td>520</td>
+                    <td>€718K</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Año 4</strong></td>
+                    <td>430</td>
+                    <td>€593K</td>
+                    <td>560</td>
+                    <td>€773K</td>
+                  </tr>
+                  <tr style="border-top:2px solid var(--accent-orange);">
+                    <td><strong>Año 5</strong></td>
+                    <td><strong>450</strong></td>
+                    <td><strong>€621K</strong></td>
+                    <td><strong>600</strong></td>
+                    <td><strong>€828K</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:20px; overflow-x:auto;">
+              <table class="financial-table" style="min-width:600px;">
+                <thead>
+                  <tr>
+                    <th style="text-align:left;"></th>
+                    <th colspan="2" style="text-align:center; border-bottom:2px solid var(--accent-orange);">📉 EBITDA Conservador</th>
+                    <th colspan="2" style="text-align:center; border-bottom:2px solid var(--accent-green);">📈 EBITDA Optimista</th>
+                  </tr>
+                  <tr>
+                    <th style="text-align:left;">Año</th>
+                    <th>EBITDA</th>
+                    <th>Margen</th>
+                    <th>EBITDA</th>
+                    <th>Margen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Año 1</strong></td>
+                    <td>€69K</td>
+                    <td>20%</td>
+                    <td>€145K</td>
+                    <td>30%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Año 2</strong></td>
+                    <td>€145K</td>
+                    <td>30%</td>
+                    <td>€217K</td>
+                    <td>35%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Año 3</strong></td>
+                    <td>€182K</td>
+                    <td>33%</td>
+                    <td>€273K</td>
+                    <td>38%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Año 4</strong></td>
+                    <td>€207K</td>
+                    <td>35%</td>
+                    <td>€309K</td>
+                    <td>40%</td>
+                  </tr>
+                  <tr style="border-top:2px solid var(--accent-orange);">
+                    <td><strong>Año 5</strong></td>
+                    <td><strong>€224K</strong></td>
+                    <td><strong>36%</strong></td>
+                    <td><strong>€348K</strong></td>
+                    <td><strong>42%</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px;">
+              <div class="cashflow-note" style="background:rgba(255,107,53,0.08); border-color:rgba(255,107,53,0.2);">
+                <span class="cashflow-icon">📉</span> <strong>Conservador:</strong> Break-even mes 10 · Payback 36 meses · EBITDA acum. 5 años: <strong>€827K</strong> · TIR: ~28%
+              </div>
+              <div class="cashflow-note" style="background:rgba(0,200,83,0.08); border-color:rgba(0,200,83,0.2);">
+                <span class="cashflow-icon">📈</span> <strong>Optimista:</strong> Break-even mes 6 · Payback 22 meses · EBITDA acum. 5 años: <strong>€1.29M</strong> · TIR: ~48%
+              </div>
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:12px; text-align:center; font-style:italic;">
+              Revenue = socios × €115 ARPU mensual × 12. Costes fijos ~€22K/mes. Márgenes EBITDA crecen con escala (costes fijos se diluyen). Basado en datos reales Brooklyn Sant Boi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cost Breakdown Detail -->
+        <div class="cost-callout reveal" style="margin-top:2rem;">
+          <h4>💡 Detalle de costes mensuales (centro maduro — Girona)</h4>
+          <ul>
+            <li>Alquiler: <strong>€5,000-6,000/mes</strong> (nave industrial Girona, 800-1000m²)</li>
+            <li>Personal: <strong>€12,000/mes</strong> (1 manager + 4 coaches + 1 recovery specialist)</li>
+            <li>Royalties/licencias: <strong>€0</strong> (marca propia, sin franquicia)</li>
+            <li>Marketing: <strong>€2,000/mes</strong> (SEO + paid ads + local events)</li>
+            <li>Suministros: <strong>€1,500/mes</strong> (electricidad Recovery Lab + general)</li>
+            <li>Seguros + varios: <strong>€1,500/mes</strong></li>
+            <li class="cost-total">TOTAL costes fijos: ~€22,000-23,000/mes</li>
+            <li class="cost-total">Break-even: 200 socios × €115 ARPU = €23,000/mes ✓</li>
+          </ul>
+          <div class="cost-validation">
+            <h5>Validación cruzada vs Brooklyn Sant Boi:</h5>
+            <ul>
+              <li>Brooklyn gasta ~€12,500-13,000/mes (sin Recovery Lab ni pista)</li>
+              <li>FORGE añade ~€10,000/mes (Recovery Lab utilities + extra staff + más m²)</li>
+              <li>Revenue adicional Recovery Lab: <strong>€8,000-12,000/mes</strong> (conservador)</li>
+              <li style="color:var(--accent-green); font-weight:600;">Net effect: positivo desde el primer mes de Recovery Lab</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Investor TIR Note -->
+        <div class="investor-note reveal" style="margin-top:1.5rem;">
+          <strong>📊 Nota para inversores:</strong> Dos escenarios presentados. <strong>Conservador:</strong> crecimiento lento (250 socios año 1), márgenes prudentes → TIR ~28%, payback 36 meses. <strong>Optimista:</strong> replica la velocidad de Brooklyn Sant Boi (300 socios en 6 meses) → TIR ~48%, payback 22 meses. En AMBOS escenarios el negocio es rentable desde el año 1. Inversión de ~€395K con capital de trabajo incluido para 6 meses de runway.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="parallax-divider" style="background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,184,0,0.05));"></div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: PLAN DE EXPANSIÓN — 3 FASES       -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="expansion">
+      <div class="section-number">07</div>
+      <div class="container">
+        <h2 class="section-title">Plan de Expansión <span class="accent">— 3 Fases</span></h2>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-phase phase-1 reveal" data-animate>
+            <div class="phase-marker">1</div>
+            <div class="glass-card phase-card">
+              <div class="phase-tag">FASE 1</div>
+              <h3 class="phase-title">"Proof of Concept"</h3>
+              <span class="phase-years">2026 – 2027</span>
+              <ul class="phase-details">
+                <li><strong>1 flagship — Girona</strong> — Capital europea del endurance sport. Hub mundial de ciclismo pro, trail running, triatlón. Comunidad deportista desproporcionada. Alquileres 40-50% más bajos que BCN metro. Storytelling brutal para inversores y prensa.</li>
+                <li>800 – 1,000 m²</li>
+                <li>Inversión: <strong style="color:#FF6B35;">~€400K</strong> (incluye working capital 6 meses)</li>
+                <li>Objetivo: validar concepto, KPIs, product-market fit</li>
+                <li>Equipo: 1 manager + 4 coaches + 1 recovery specialist</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-phase phase-2 reveal" data-animate>
+            <div class="phase-marker">2</div>
+            <div class="glass-card phase-card">
+              <div class="phase-tag">FASE 2</div>
+              <h3 class="phase-title">"Scale Locally"</h3>
+              <span class="phase-years">2027 – 2028</span>
+              <ul class="phase-details">
+                <li><strong>2 centros adicionales</strong> — Barcelona (Poblenou/22@) + Madrid (zona periurbana premium)</li>
+                <li>Inversión: <strong style="color:#FF6B35;">~€800K</strong> (2 centros, leverage datos flagship)</li>
+                <li>Brand sponsors (Puma, Red Bull)</li>
+                <li>Liga <strong>FORGE Games</strong> entre 3 centros</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-phase phase-3 reveal" data-animate>
+            <div class="phase-marker">3</div>
+            <div class="glass-card phase-card">
+              <div class="phase-tag">FASE 3</div>
+              <h3 class="phase-title">"Platform &amp; Licensing"</h3>
+              <span class="phase-years">2028 – 2030</span>
+              <ul class="phase-details">
+                <li><strong>5-10 centros</strong> (propio + franquicia)</li>
+                <li>Licenciar <strong>FORGE Test™</strong> (€1,500-2,000/año por afiliado)</li>
+                <li>App digital independiente</li>
+                <li>FORGE Games nacional → internacional</li>
+                <li><strong style="color:#FFB800;">10+ centros, €3M+ facturación, 35%+ EBITDA</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="parallax-divider" style="background: linear-gradient(135deg, rgba(255,184,0,0.06), rgba(255,107,53,0.04));"></div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: EQUIPO FUNDADOR                    -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="equipo">
+      <div class="section-number">08</div>
+      <div class="container">
+        <h2 class="section-title">Equipo <span class="accent">Fundador</span></h2>
+
+        <!-- JO SOC FIT — Sociedad Operadora -->
+        <div class="glass-card" style="padding:20px 28px 8px; margin-bottom:32px; border-left:3px solid var(--accent-orange); text-align:center;" data-animate>
+          <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:4px;">
+            <span style="font-size:1.5rem;">🔥</span>
+            <h3 style="font-family:'Oswald',sans-serif; font-size:1.5rem; font-weight:700; text-transform:uppercase; letter-spacing:3px; margin:0;">
+              <span class="gradient-text">Jo Soc Fit</span>
+            </h3>
+            <span style="font-size:1.5rem;">🔥</span>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">Sociedad operadora &amp; fundadora — Track record validado con Brooklyn Fitboxing Sant Boi &amp; Viladecans</p>
+        </div>
+
+        <div class="team-grid stagger-children">
+          <!-- Carlos -->
+          <div class="glass-card team-card" data-animate>
+            <div class="team-avatar" style="background: linear-gradient(135deg, #FF6B35, #ff8f66);">
+              <span>CM</span>
+            </div>
+            <h3 class="team-name">Carlos Magretti Fernández</h3>
+            <span class="team-role">COO / Operaciones</span>
+            <ul class="team-stats">
+              <li>+10 años gestionando centros deportivos</li>
+              <li>Brooklyn Fitboxing <strong>TOP 5 mundial</strong></li>
+              <li>Sant Boi: 300 socios en 6 meses, <strong>10.7x vs plan</strong></li>
+              <li>Conversión <strong>55%</strong> (vs 35-40% media)</li>
+            </ul>
+            <blockquote class="team-quote">"El mejor operador de centros fitness que conocemos"</blockquote>
+          </div>
+
+          <!-- Olivier -->
+          <div class="glass-card team-card" data-animate>
+            <div class="team-avatar" style="background: linear-gradient(135deg, #FFB800, #ffe066);">
+              <span>OP</span>
+            </div>
+            <h3 class="team-name">Olivier Philippe</h3>
+            <span class="team-role">CFO / Finanzas &amp; Estrategia</span>
+            <ul class="team-stats">
+              <li>+15 años inversión inmobiliaria</li>
+              <li>Multi-emprendedor serial</li>
+              <li>Estructuración financiera y fundraising</li>
+              <li>Control costes y optimización márgenes</li>
+            </ul>
+            <blockquote class="team-quote">"Disciplina financiera + visión estratégica a largo plazo"</blockquote>
+          </div>
+
+          <!-- Joachim -->
+          <div class="glass-card team-card" data-animate>
+            <div class="team-avatar" style="background: linear-gradient(135deg, #FF6B35, #FFB800);">
+              <span>JA</span>
+            </div>
+            <h3 class="team-name">Joachim Antonsen</h3>
+            <span class="team-role">CEO / Business Dev &amp; Growth</span>
+            <ul class="team-stats">
+              <li>Lead Partner Manager EMEA @ Shopify</li>
+              <li>Partnerships multi-mercado (FR, ES, PT, GR)</li>
+              <li>Scaling, B2B development</li>
+              <li>Red de contactos internacional</li>
+            </ul>
+            <blockquote class="team-quote">"El growth engine que lleva el proyecto al siguiente nivel"</blockquote>
+          </div>
+
+        </div>
+
+        <!-- SOCIOS INVERSORES & ESTRATÉGICOS -->
+        <div class="glass-card" style="padding:20px 28px 8px; margin-top:48px; margin-bottom:32px; border-left:3px solid #7C4DFF; text-align:center;" data-animate>
+          <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:4px;">
+            <span style="font-size:1.5rem;">💎</span>
+            <h3 style="font-family:'Oswald',sans-serif; font-size:1.4rem; font-weight:700; text-transform:uppercase; letter-spacing:3px; margin:0;">
+              <span style="background:linear-gradient(135deg,#7C4DFF,#00C853);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Socios Inversores &amp; Estratégicos</span>
+            </h3>
+            <span style="font-size:1.5rem;">💎</span>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">Capital + expertise digital + marca + experiencia retail — las piezas que aceleran de startup a cadena</p>
+        </div>
+
+        <div class="team-grid-row2 stagger-children">
+          <!-- Enric -->
+          <div class="glass-card team-card" data-animate>
+            <div class="team-avatar" style="background: linear-gradient(135deg, #00C853, #69F0AE);">
+              <span>EG</span>
+            </div>
+            <h3 class="team-name">Enric Ginovart Monclús</h3>
+            <span class="team-role" style="color:#00C853;">Socio Inversor / CDO — Digital &amp; Tech</span>
+            <ul class="team-stats">
+              <li>CEO de Incubalia &amp; Dormideo (eCommerce <strong>€10M+</strong>)</li>
+              <li><strong>+€20M facturados</strong> para clientes desde su consultora</li>
+              <li>TOP 5 online en colchones España (Amazon)</li>
+              <li>Experto en automatización, CRM &amp; funnel de conversión</li>
+              <li>Ingeniero Telecom UPC + Profesor universitario ADE</li>
+            </ul>
+            <blockquote class="team-quote">Si no se puede medir, automatizar y escalar… no es un negocio, es un hobby</blockquote>
+          </div>
+
+          <!-- Luc -->
+          <div class="glass-card team-card" data-animate>
+            <div class="team-avatar" style="background: linear-gradient(135deg, #7C4DFF, #B388FF);">
+              <span>LC</span>
+            </div>
+            <h3 class="team-name">Luc Cardona</h3>
+            <span class="team-role" style="color:#7C4DFF;">Socio Inversor / CMO — Brand &amp; Retail</span>
+            <ul class="team-stats">
+              <li>B2B Retail Director @ <strong>Kave Home</strong> (€321M revenue, 159 tiendas, 5 continentes)</li>
+              <li>Ex-DG <strong>Roche Bobois</strong> España, Bélgica, NL, Italia, Portugal (20+ años)</li>
+              <li>Kave Home: <strong>TOP 10 Financial Times</strong> empresas europeas más rápido crecimiento</li>
+              <li>Especialista en flagship openings, experiencia premium &amp; brand elevation</li>
+              <li>Scaling retail de 1 tienda a 159 en 5 continentes</li>
+            </ul>
+            <blockquote class="team-quote">Una marca no se construye con logos, se construye con experiencias que perduran</blockquote>
+          </div>
+        </div><!-- /team-grid-row2 -->
+
+        <!-- Track Record -->
+        <div class="glass-card track-record reveal" data-animate style="margin-top:3rem;">
+          <h3 class="card-title" style="text-align:center;">📊 Track Record Jo Soc Fit — Brooklyn Fitboxing Sant Boi</h3>
+          <div class="track-stats">
+            <div class="track-stat">
+              <span class="track-stat-value" data-count="220">0</span><span class="track-stat-suffix">K€</span>
+              <span class="track-stat-label">Invertidos</span>
+            </div>
+            <div class="track-stat-arrow">→</div>
+            <div class="track-stat">
+              <span class="track-stat-value" data-count="266">0</span><span class="track-stat-suffix">K€</span>
+              <span class="track-stat-label">Facturación Año 1</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-value" data-count="77">0</span><span class="track-stat-suffix">K€</span>
+              <span class="track-stat-label">EBITDA</span>
+            </div>
+            <div class="track-stat">
+              <span class="track-stat-value" data-count="300">0</span>
+              <span class="track-stat-label">Socios / 6 meses</span>
+            </div>
+          </div>
+          <div class="track-footer">
+            Replicando Viladecans <strong>23% menos inversión</strong> · Satisfacción <strong>4.8/5</strong> · Churn <strong>5-6%</strong> · Fill rate <strong>90-95%</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="parallax-divider" style="background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(255,184,0,0.08));"></div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 10: VENTAJA COMPETITIVA — MOAT        -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="moat">
+      <div class="section-number">09</div>
+      <div class="container">
+        <h2 class="section-title">Ventaja Competitiva <span class="accent">— MOAT</span></h2>
+
+        <div class="glass-card table-wrapper reveal" data-animate>
+          <div class="table-scroll">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th class="factor-col">Factor</th>
+                  <th>Gym Tradicional</th>
+                  <th>CrossFit Box</th>
+                  <th>Hyrox (eventos)</th>
+                  <th>Boutique Studio</th>
+                  <th class="forge-col">FORGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="factor-col">Comunidad</td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-yes">✅</span></td>
+                  <td><span class="rating-yes">✅</span></td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td class="forge-col"><span class="rating-best">✅✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Competición</td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td><span class="rating-best">✅✅</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td class="forge-col"><span class="rating-best">✅✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Recovery</td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td class="forge-col"><span class="rating-best">✅✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Multi-deporte</td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td class="forge-col"><span class="rating-yes">✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Tech / Data</td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td class="forge-col"><span class="rating-best">✅✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Pista indoor</td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td class="forge-col"><span class="rating-yes">✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Accesibilidad</td>
+                  <td><span class="rating-yes">✅</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-yes">✅</span></td>
+                  <td><span class="rating-mid">⚠️</span></td>
+                  <td class="forge-col"><span class="rating-yes">✅</span></td>
+                </tr>
+                <tr>
+                  <td class="factor-col">Scalable IP</td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td><span class="rating-best">✅✅</span></td>
+                  <td><span class="rating-no">❌</span></td>
+                  <td class="forge-col"><span class="rating-best">✅✅</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- MOAT Cards -->
+        <div class="moat-grid stagger-children" style="margin-top:3rem;">
+          <div class="glass-card moat-card" data-animate>
+            <div class="moat-icon">🧬</div>
+            <h4>FORGE Test™</h4>
+            <p>IP propietaria, network effects, licensing potential</p>
+          </div>
+          <div class="glass-card moat-card" data-animate>
+            <div class="moat-icon">🏟️</div>
+            <h4>Pista Indoor Integrada</h4>
+            <p>Nadie la tiene. Diferenciador brutal.</p>
+          </div>
+          <div class="glass-card moat-card" data-animate>
+            <div class="moat-icon">🧊</div>
+            <h4>Recovery Lab</h4>
+            <p>Tendencia no integrada en funcional aún</p>
+          </div>
+          <div class="glass-card moat-card" data-animate>
+            <div class="moat-icon">🎯</div>
+            <h4>Multi-Experiencia</h4>
+            <p>No dependes de una sola disciplina</p>
+          </div>
+          <div class="glass-card moat-card" data-animate>
+            <div class="moat-icon">📊</div>
+            <h4>Data + Gamification</h4>
+            <p>Tech como core, no add-on</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="parallax-divider" style="background: linear-gradient(135deg, rgba(255,184,0,0.06), rgba(255,107,53,0.06));"></div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 10B: VENTAJA DIGITAL & EXPERIENCIAL   -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="digital-experiencial">
+      <div class="section-number">09B</div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="gradient-text">Ventaja Digital &amp; Experiencial</h2>
+          <p class="subtitle">Tech stack propietario + experiencia de marca premium = moat incopiable</p>
+        </div>
+
+        <div class="digital-grid">
+          <!-- Cerebro Digital — Enric -->
+          <div class="glass-card digital-card reveal">
+            <div class="digital-icon">🧠</div>
+            <h3>El Cerebro Digital de FORGE</h3>
+            <div class="digital-subtitle">Tech stack que ningún box de CrossFit tiene</div>
+            <ul>
+              <li><strong style="color:#fff;">FORGE App (PWA)</strong> — Progressive Web App sin coste App Store: booking, rankings FORGE Test™ en tiempo real, social feed, challenges entre socios, tracking de progresión, notificaciones personalizadas</li>
+              <li><strong style="color:#fff;">CRM &amp; Automatización</strong> — Lead capture → trial booking → follow-up automático → conversión → onboarding → retención. El mismo framework que llevó Dormideo a TOP 5 online España</li>
+              <li><strong style="color:#fff;">Adquisición Zero-Waste</strong> — SEO local, Google Ads hiperlocal, Meta Ads con lookalike audiences, remarketing secuencial. Cada euro medido, cada conversión trazada</li>
+              <li><strong style="color:#fff;">Data Analytics Dashboard</strong> — KPIs en tiempo real por centro: churn prediction por IA, LTV por cohorte, fill rate por franja, ARPU por tier, NPS automático</li>
+              <li><strong style="color:#fff;">Automatización Operativa</strong> — Facturación automática, control accesos IoT, scheduling coaches con IA, gestión inventario café/suplementos, reporting automatizado para inversores</li>
+            </ul>
+            <span class="digital-tag">El stack tech que ningún box de CrossFit tiene</span>
+          </div>
+
+          <!-- Experiencia de Marca — Luc -->
+          <div class="glass-card digital-card reveal">
+            <div class="digital-icon">✨</div>
+            <h3>La Experiencia FORGE</h3>
+            <div class="digital-subtitle">De gym funcional a marca aspiracional</div>
+            <ul>
+              <li><strong style="color:#fff;">Diseño Interior Retail Premium</strong> — No es un almacén con hierros. Materiales nobles, iluminación arquitectónica, zonas diferenciadas con identidad visual. Inspiración: flagships Kave Home + Aesop + Equinox</li>
+              <li><strong style="color:#fff;">Brand Experience 360°</strong> — Desde el primer touchpoint digital hasta cruzar la puerta. Cada detalle comunica: la música, el olor, la recepción, los materiales, el packaging del merchandise</li>
+              <li><strong style="color:#fff;">Flagship como Showroom</strong> — El centro de Girona no es "un gym". Es el showroom de FORGE — donde franquiciados, sponsors y prensa vienen a ver el concepto en acción</li>
+              <li><strong style="color:#fff;">Merchandising &amp; Lifestyle Brand</strong> — FORGE no vende solo membresías. Vende un estilo de vida. Ropa técnica, accesorios, nutrición — diseño premium que la gente QUIERE llevar fuera del gym</li>
+              <li><strong style="color:#fff;">Concept Store Integrado</strong> — Zona retail curada: recovery products, nutrición deportiva, ropa técnica. No una estantería triste — un espacio retail con identidad de marca</li>
+            </ul>
+            <span class="digital-tag">El salto que nadie ha dado en fitness funcional</span>
+          </div>
+        </div>
+
+        <!-- Callout connecting both -->
+        <div class="callout-box reveal" style="margin-top:2.5rem;">
+          <p>"<span class="gradient-text" style="font-weight:800;">Enric construye la máquina que adquiere, convierte y retiene.</span> <span style="color:var(--text-secondary);">Luc transforma el espacio en una experiencia que la gente recuerda y recomienda.</span> <strong style="color:#fff;">Juntos crean un flywheel: experiencia premium → boca a boca → adquisición orgánica → más datos → mejor experiencia.</strong>"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="parallax-divider" style="background: linear-gradient(135deg, rgba(0,200,83,0.04), rgba(124,77,255,0.04));"></div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 11: RIESGOS Y MITIGACIÓN              -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="riesgos">
+      <div class="section-number">10</div>
+      <div class="container">
+        <h2 class="section-title">Riesgos <span class="accent">y Mitigación</span></h2>
+
+        <div class="risk-grid stagger-children">
+          <div class="glass-card risk-card" data-animate>
+            <div class="risk-header">
+              <span class="risk-icon">⚡</span>
+              <h4>Inversión elevada (~€400K)</h4>
+            </div>
+            <p class="risk-desc">Ticket significativo para el flagship, aunque 23% inferior a un centro tipo Brooklyn+Recovery combinado.</p>
+            <div class="risk-separator"></div>
+            <p class="risk-mitigation">Track record Brooklyn ROI año 1, modelo Girona reduce costes 40-50% vs BCN, working capital 6 meses incluido, pre-venta de membresías.</p>
+          </div>
+
+          <div class="glass-card risk-card" data-animate>
+            <div class="risk-header">
+              <span class="risk-icon">🏃</span>
+              <h4>Competencia Hyrox</h4>
+            </div>
+            <p class="risk-desc">Hyrox crece rápido y domina el espacio de competición funcional.</p>
+            <div class="risk-separator"></div>
+            <p class="risk-mitigation">No competimos CON Hyrox — somos el "Hyrox Home". Complementarios, no rivales.</p>
+          </div>
+
+          <div class="glass-card risk-card" data-animate>
+            <div class="risk-header">
+              <span class="risk-icon">💪</span>
+              <h4>Saturación funcional</h4>
+            </div>
+            <p class="risk-desc">Mercado de fitness funcional cada vez más competido.</p>
+            <div class="risk-separator"></div>
+            <p class="risk-mitigation">Recovery Lab + FORGE Test™ + pista indoor diferencian radicalmente.</p>
+          </div>
+
+          <div class="glass-card risk-card" data-animate>
+            <div class="risk-header">
+              <span class="risk-icon">⚙️</span>
+              <h4>Ejecución operativa</h4>
+            </div>
+            <p class="risk-desc">Riesgo de que la operativa no escale bien.</p>
+            <div class="risk-separator"></div>
+            <p class="risk-mitigation">Carlos: track record TOP 5 mundial, 300 socios en 6 meses, sistemas probados.</p>
+          </div>
+
+          <div class="glass-card risk-card" data-animate>
+            <div class="risk-header">
+              <span class="risk-icon">📉</span>
+              <h4>Tendencia pasajera</h4>
+            </div>
+            <p class="risk-desc">¿Es el fitness funcional una moda?</p>
+            <div class="risk-separator"></div>
+            <p class="risk-mitigation">15+ años creciendo. Modelo diversificado — no depende de una sola tendencia.</p>
+          </div>
+
+          <div class="glass-card risk-card" data-animate>
+            <div class="risk-header">
+              <span class="risk-icon">📍</span>
+              <h4>Localización / Alquiler</h4>
+            </div>
+            <p class="risk-desc">Encontrar local adecuado a coste razonable.</p>
+            <div class="risk-separator"></div>
+            <p class="risk-mitigation">Olivier: real estate expertise + modelo periurbano = rentas más bajas, más m².</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="parallax-divider" style="background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(255,184,0,0.06));"></div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 12: CONCLUSIÓN / CALL TO ACTION       -->
+    <!-- ============================================ -->
+    <section class="section reveal" id="conclusion">
+      <div class="section-number">11</div>
+      <div class="container conclusion-container">
+
+        <div class="conclusion-quote reveal" data-animate>
+          <p class="big-quote gradient-text">"FORGE no es otro gimnasio. Es la plataforma que falta en Europa para convertir el fitness funcional en un deporte con estructura, datos, comunidad y competición."</p>
+        </div>
+
+        <div class="conclusion-quote-secondary reveal" data-animate>
+          <p class="secondary-quote">"Hyrox demostró que <strong>$140M de revenue</strong> se pueden construir en 7 años dando a la gente un <em>PROPÓSITO</em> para entrenar. FORGE lleva ese propósito al día a día."</p>
+        </div>
+
+        <!-- Key Numbers -->
+        <div class="conclusion-metrics stagger-children">
+          <div class="glass-card metric-card" data-animate>
+            <span class="metric-value">~€400K</span>
+            <span class="metric-label">Inversión Flagship</span>
+          </div>
+          <div class="glass-card metric-card" data-animate>
+            <span class="metric-value" style="color:#FFB800;">28-48%</span>
+            <span class="metric-label">TIR (Cons. / Opt.)</span>
+          </div>
+          <div class="glass-card metric-card" data-animate>
+            <span class="metric-value">22-36</span>
+            <span class="metric-label">Meses Payback</span>
+          </div>
+          <div class="glass-card metric-card" data-animate>
+            <span class="metric-value" style="color:#FF6B35;">€224-348K</span>
+            <span class="metric-label">EBITDA Año 5</span>
+          </div>
+          <div class="glass-card metric-card" data-animate>
+            <span class="metric-value gradient-text">€2.5M+</span>
+            <span class="metric-label">Potencial 5 Centros</span>
+          </div>
+        </div>
+
+        <!-- Closing Statement -->
+        <div class="glass-card closing-statement reveal" data-animate>
+          <p>"Los cinco socios ya han demostrado que saben construir comunidades fitness rentables, escalar marcas internacionales y crear máquinas digitales de adquisición. Ahora quieren crear algo que <strong>no existe aún en Europa</strong>."</p>
+        </div>
+
+        <!-- Team Justification -->
+        <div class="glass-card reveal" data-animate style="margin: 2rem auto; max-width:800px; padding:28px; border-left: 3px solid var(--accent-orange); text-align:left;">
+          <p style="font-size:1rem; color:var(--text-secondary); line-height:1.7;">
+            <strong style="color:var(--accent-orange);">¿Por qué este equipo?</strong> Carlos sabe operar centros como nadie (TOP 5 mundial). Olivier estructura las finanzas con rigor quirúrgico. Joachim escala negocios multi-mercado desde Shopify EMEA. Enric construye la máquina digital que adquiere, convierte y retiene (€20M+ facturados online). Luc transforma espacios en experiencias de marca que la gente recuerda (159 tiendas Kave Home en 5 continentes). <strong style="color:#fff;">Juntos, cubren las 5 dimensiones críticas: operaciones, finanzas, growth, tecnología y marca.</strong>
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-wrapper reveal" data-animate>
+          <a href="mailto:contacto@forgeathleticclub.com" class="cta-button">
+            Hablemos <span class="cta-arrow">→</span> contacto@forgeathleticclub.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-logo">FORGE<span class="accent">.</span></div>
+        <p class="footer-tagline">Functional. Competitive. Social.</p>
+        <div class="footer-divider"></div>
+        <p class="footer-confidential">Confidencial — Propuesta de inversión 2026</p>
+        <p class="footer-contact">Contacto: Joachim, Olivier, Carlos, Enric, Luc</p>
+        <p class="footer-brand">FORGE Athletic Club</p>
+      </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT                                    -->
+    <!-- ============================================ -->
+    <script>
+    (function() {
+      'use strict';
+
+      /* -------------------------------------------
+         1. Intersection Observer — Scroll Reveal
+      ------------------------------------------- */
+      const revealObserver2 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Animate chart bars inside
+            entry.target.querySelectorAll('.chart-bar').forEach(bar => {
+              setTimeout(() => bar.classList.add('animated'), 300);
+            });
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver2.observe(el));
+
+      /* -------------------------------------------
+         2. Counter Animation
+      ------------------------------------------- */
+      function animateCounter(el) {
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        if (isNaN(target)) return;
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function easeOutCubic(t) {
+          return 1 - Math.pow(1 - t, 3);
+        }
+
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutCubic(progress);
+          const current = Math.round(eased * target);
+          el.textContent = current.toLocaleString('es-ES');
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.counted) {
+            entry.target.dataset.counted = 'true';
+            animateCounter(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+      /* -------------------------------------------
+         3. Smooth Scroll for Anchor Links
+      ------------------------------------------- */
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      /* -------------------------------------------
+         4. Chart Bar Animation
+      ------------------------------------------- */
+      const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.animated) {
+            entry.target.dataset.animated = 'true';
+            const bars = entry.target.querySelectorAll('.chart-bar');
+            bars.forEach((bar, index) => {
+              const targetWidth = bar.getAttribute('data-width');
+              if (targetWidth) {
+                setTimeout(() => {
+                  bar.style.width = targetWidth;
+                }, index * 80);
+              }
+            });
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.chart-container, .pl-chart').forEach(el => barObserver.observe(el));
+
+      /* -------------------------------------------
+         5. Parallax Effect
+      ------------------------------------------- */
+      const parallaxDividers = document.querySelectorAll('.parallax-divider');
+
+      function updateParallax() {
+        const scrollY = window.scrollY;
+        parallaxDividers.forEach(div => {
+          const rect = div.getBoundingClientRect();
+          const speed = 0.3;
+          const yOffset = (rect.top + scrollY - scrollY) * speed;
+          div.style.transform = 'translateY(' + (yOffset * 0.15) + 'px)';
+        });
+      }
+
+      let parallaxTicking = false;
+      window.addEventListener('scroll', () => {
+        if (!parallaxTicking) {
+          requestAnimationFrame(() => {
+            updateParallax();
+            parallaxTicking = false;
+          });
+          parallaxTicking = true;
+        }
+      }, { passive: true });
+
+      /* -------------------------------------------
+         6. Stagger Reveal
+      ------------------------------------------- */
+      const staggerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.staggered) {
+            entry.target.dataset.staggered = 'true';
+            const children = entry.target.children;
+            Array.from(children).forEach((child, index) => {
+              setTimeout(() => {
+                child.classList.add('visible');
+              }, index * 100);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.stagger-children').forEach(el => staggerObserver.observe(el));
+
+      /* -------------------------------------------
+         7. Nav Link Active State on Scroll
+      ------------------------------------------- */
+      const sections = document.querySelectorAll('.section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      function updateActiveNav() {
+        const scrollPos = window.scrollY + 200;
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }
+
+      let navTicking = false;
+      window.addEventListener('scroll', () => {
+        if (!navTicking) {
+          requestAnimationFrame(() => {
+            updateActiveNav();
+            navTicking = false;
+          });
+          navTicking = true;
+        }
+      }, { passive: true });
+
+      /* -------------------------------------------
+         8. Navbar Scroll Effect
+      ------------------------------------------- */
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }, { passive: true });
+      }
+
+    })();
+    </script>
+</body>
+</html>
